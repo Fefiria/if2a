@@ -5,6 +5,7 @@ use App\Http\Controllers\PeriodeController;
 use App\Http\Controllers\PriodeController;
 use App\Http\Controllers\ProdiController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Routing\Annotation\Route as AnnotationRoute;
 
 Route::get('/', function(){
     return view('welcome');
@@ -21,4 +22,8 @@ Route::resource('/periode', PeriodeController::class);
 
 Route::resource('/priode', PriodeController::class);
 
-Route::get('/prodi', [ProdiController::class, 'index']);
+Route::resource('/prodi', ProdiController::class);
+
+Route::get('/main', function(){
+    return view('main');
+});
