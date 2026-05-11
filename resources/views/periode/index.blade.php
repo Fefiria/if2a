@@ -1,8 +1,22 @@
 @extends('main')
 
+@section('title', 'Periode')
+
 @section('content')
-    <h1>Periode</h1>
-    @foreach ($result as $item)
-        {{$item->tahun_akademik}} -  {{$item->semester}} <br> 
-    @endforeach
+<a href="{{route('fakultas.create')}}" class="btn btn-primary">Tambah Periode</a>
+<table class="table table-border">
+    <table class="table table-border">
+        <tr>
+            <th>No</th>
+            <th>Tahun Akademik</th>
+            <th>Semester</th>
+        </tr>
+        @foreach ($result as $item => $periode)
+            <tr>
+                <td>{{$item + 1 }}</td>
+                <td>{{$periode->tahun_akademik}}</td>
+                <td>{{$periode->semester}}</td>
+            </tr>
+        @endforeach
+    </table>
 @endsection

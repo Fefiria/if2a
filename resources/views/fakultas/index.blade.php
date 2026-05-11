@@ -3,6 +3,7 @@
 @section('title', 'Fakultas')
 
 @section('content')
+<a href="{{route('fakultas.create')}}" class="btn btn-primary">Tambah</a>
 <table class="table table-border">
         <tr>
             <th>No</th>

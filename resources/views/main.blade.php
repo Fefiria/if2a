@@ -345,7 +345,14 @@
                                 <p>Dashboard v3</p>
                                 </a>
                             </li>
+                            
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('periode.index') }}" class="nav-link">
+                            <i class="nav-icon bi bi-building"></i>
+                            <p>Periode</p>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('fakultas.index') }}" class="nav-link">
@@ -395,6 +402,7 @@
             <div class="container-fluid">
                 <!--begin::Row-->
                 <div class="row">
+                    <h1>@yield('title')</h1>
                 <div class="col-12">
                     <!-- Default box -->
                     <div class="card">

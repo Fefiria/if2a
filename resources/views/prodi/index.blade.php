@@ -3,6 +3,7 @@
 @section('title', 'Data Program Studi')
 
 @section('content')
+    <a href="{{route('prodi.create')}}" class="btn btn-primary">Tambah Periode</a>
     <table class="table table-border">
         <tr>
             <th>No</th>
