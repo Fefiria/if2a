@@ -17,6 +17,6 @@ class Prodi extends Model
     //Relasi dengan fakultas
     public function fakultas()
     {
-        return $this->belongsTo(Fakultas::class);
+        return $this->belongsTo(Fakultas::class, 'fakultas_id');
     }
 }

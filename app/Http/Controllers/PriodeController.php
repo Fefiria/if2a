@@ -61,6 +61,10 @@ class PriodeController extends Controller
      */
     public function destroy(Priode $priode)
     {
-        //
+        $priode = Fakultas::find($priode);
+
+        // dd($fakultas);
+        $priode->delete();//hapus
+        return redirect()->route('priode.index'); 
     }
 }

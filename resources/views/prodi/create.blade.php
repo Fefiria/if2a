@@ -24,6 +24,29 @@
             {{ $message }}
         </div>
     @enderror
+
+    <div class="form-group mb-3">
+        <label for="kaprodi">Nama Kaprodi</label>
+        <input type="text" name="kaprodi" class="form-control" value="{{ old('kaprodi') }}">
+    </div>
+    @error('kaprodi')
+        <div class="text-danger small mt-1">{{ $message }}</div>
+    @enderror
+
+    <div class="form-group mb-3">
+        <label for="fakultas_id">Fakultas</label>
+        <select name="fakultas_id" class="form-control">
+            <option value="">-- Pilih Fakultas --</option>
+            @foreach ($fakultas as $f)
+                <option value="{{ $f->id }}" {{ old('fakultas_id') == $f->id ? 'selected' : '' }}>
+                    {{ $f->nama_fakultas }}
+                </option>
+            @endforeach
+        </select>
+    </div>
+    @error('fakultas_id')
+        <div class="text-danger small mt-1">{{ $message }}</div>
+    @enderror
     
     <button type="submit" class="btn btn-primary mt-2">Simpan</button>
 </form>
