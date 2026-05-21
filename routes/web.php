@@ -15,7 +15,8 @@ Route::get('/tentang', function(){
     return view('tentang');
 });
 
-Route::resource('/fakultas', FakultasController::class);
+Route::resource('/fakultas', FakultasController::class)->parameters(['fakultas' => 'fakultas']);
+// UBAH Parameter route fakultas/{fakultas} menjadi menjadi fakultas/{fakultas}. Biar meemastikan rute
 
 Route::resource('/periode', PeriodeController::class);
 

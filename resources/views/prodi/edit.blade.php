@@ -3,8 +3,8 @@
 @section('title', 'Edit Prodi')
 
 @section('content')
-<form action="{{route('prodi.store')}}" method="POST">
-    @method('POST')
+<form action="{{route('prodi.update', $prodi->id)}}" method="POST">
+    @method('PUT')
     <div class="form-group">
         <label for="nama_prodi">Nama Program Studi</label> 
         <input type="text" name="nama_prodi" class="form-control" value="{{ old('nama_prodi')  ?? $prodi->nama_prodi}}">
@@ -39,7 +39,7 @@
         <select name="fakultas_id" class="form-control">
             <option value="">-- Pilih Fakultas --</option>
             @foreach ($fakultas as $f)
-                <option value="{{ $f->id }}" {{ old('fakultas_id') == $f->id ? 'selected' : '' }}>
+                <option value="{{ $f->id }}" {{ (old('fakultas_id') == $f->id ? 'selected' : ($prodi->fakultas_id == $f->id ? 'selected' : ""))}}>
                     {{ $f->nama_fakultas }}
                 </option>
             @endforeach
