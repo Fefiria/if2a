@@ -16,6 +16,18 @@
                 <td>{{$item + 1 }}</td>
                 <td>{{$periode->tahun_akademik}}</td>
                 <td>{{$periode->semester}}</td>
+                <form method="POST" action="{{ route('periode.destroy', $periode->id) }}">
+                    @csrf
+                    <input name="_method" type="hidden" value="DELETE">
+                    <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
+                        data-toggle="tooltip" title='Delete'
+                        data-nama='{{ $prodi->semester }}'>Hapus
+                    </button>
+                </form>
+                <a href="{{ route('periode.edit', $periode->id) }}"
+                class="btn btn-warning btn-sm">
+                Edit
+                </a>
             </tr>
         @endforeach
     </table>

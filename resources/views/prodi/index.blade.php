@@ -31,6 +31,10 @@
                             data-nama='{{ $prodi->nama_prodi }}'>Hapus
                         </button>
                     </form>
+                    <a href="{{ route('prodi.edit', $prodi->id) }}"
+                    class="btn btn-warning btn-rounded">
+                    Edit
+                    </a>
                 </td>
             </tr>
         @endforeach

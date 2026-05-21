@@ -17,13 +17,20 @@
                 <td>{{ $result->nama_fakultas }}</td>
                 <td>{{ $result->singkatan }}</td>
                 <td>
-                    <form method="POST" action="{{ route('fakultas.destroy', $result->id) }}">
-                    @csrf
-                    <input name="_method" type="hidden" value="DELETE">
-                    <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
-                        data-toggle="tooltip" title='Delete'
-                        data-nama='{{ $result->nama_fakultas }}'>Hapus</button>
+                    <form method="POST" action="{{ route('fakultas.destroy', $result->id) }}"
+                        class="d-inline">
+                        @csrf
+                        <input name="_method" type="hidden" value="DELETE">
+                        <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
+                            data-toggle="tooltip" title='Delete'
+                            data-nama='{{ $result->nama_fakultas }}'>Hapus
+                        </button>
+                        
                     </form>
+                    <a href="{{ route('fakultas.edit', $result->id) }}"
+                        class="btn btn-warning btn-rounded">
+                        Edit
+                    </a>
                 </td>
             </tr>
         @endforeach

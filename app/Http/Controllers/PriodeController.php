@@ -45,7 +45,9 @@ class PriodeController extends Controller
      */
     public function edit(Priode $priode)
     {
-        //
+        $priode = Fakultas::find($priode);
+        // dd($priode);
+        return view ('priode.edit', compact ('priode'));
     }
 
     /**

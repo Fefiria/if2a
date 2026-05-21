@@ -34,7 +34,7 @@
         <!--begin::Accessibility Features-->
         <!-- Skip links will be dynamically added by accessibility.js -->
         <meta name="supported-color-schemes" content="light dark" />
-        <link rel="preload" href="../css/adminlte.css" as="style" />
+        <link rel="preload" <link rel="stylesheet" href="{{ asset('css/adminlte.css') }}" as="style" />
         <!--end::Accessibility Features-->
 
         <!--begin::Fonts-->
@@ -65,7 +65,7 @@
         <!--end::Third Party Plugin(Bootstrap Icons)-->
 
         <!--begin::Required Plugin(AdminLTE)-->
-        <link rel="stylesheet" href="../css/adminlte.css" />
+        <link rel="stylesheet" href="{{ asset('css/adminlte.css') }}" />
         <!--end::Required Plugin(AdminLTE)-->
     <script data-cfasync="false" nonce="ef1ea391-9ebd-40cc-bba2-06437a0c4d95">try{(function(w,d){!function(F,G,H,I){if(F.zaraz)console.error("zaraz is loaded twice");else{F[H]=F[H]||{};F[H].executed=[];F.zaraz={deferred:[],listeners:[]};F.zaraz._v="5882";F.zaraz._n="ef1ea391-9ebd-40cc-bba2-06437a0c4d95";F.zaraz.q=[];F.zaraz._f=function(J){return async function(){var K=Array.prototype.slice.call(arguments);F.zaraz.q.push({m:J,a:K})}};for(const L of["track","set","debug"])F.zaraz[L]=F.zaraz._f(L);F.zaraz.init=()=>{var M=G.getElementsByTagName(I)[0],N=G.createElement(I),O=G.getElementsByTagName("title")[0];O&&(F[H].t=G.getElementsByTagName("title")[0].text);F[H].x=Math.random();F[H].w=F.screen.width;F[H].h=F.screen.height;F[H].j=F.innerHeight;F[H].e=F.innerWidth;F[H].l=F.location.href;F[H].r=G.referrer;F[H].k=F.screen.colorDepth;F[H].n=G.characterSet;F[H].o=(new Date).getTimezoneOffset();if(F.dataLayer)for(const P of Object.entries(Object.entries(dataLayer).reduce((Q,R)=>({...Q[1],...R[1]}),{})))zaraz.set(P[0],P[1],{scope:"page"});F[H].q=[];for(;F.zaraz.q.length;){const S=F.zaraz.q.shift();F[H].q.push(S)}N.defer=!0;for(const T of[localStorage,sessionStorage])Object.keys(T||{}).filter(V=>V.startsWith("_zaraz_")).forEach(U=>{try{F[H]["z_"+U.slice(7)]=JSON.parse(T.getItem(U))}catch{F[H]["z_"+U.slice(7)]=T.getItem(U)}});N.referrerPolicy="origin";N.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(F[H])));M.parentNode.insertBefore(N,M)};["complete","interactive"].includes(G.readyState)?zaraz.init():F.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async bO=>new Promise(bP=>{if(bO){bO.e&&bO.e.forEach(bQ=>{try{const bR=d.querySelector("script[nonce]"),bS=bR?.nonce||bR?.getAttribute("nonce"),bT=d.createElement("script");bS&&(bT.nonce=bS);bT.innerHTML=bQ;bT.onload=()=>{d.head.removeChild(bT)};d.head.appendChild(bT)}catch(bU){console.error(`Error executing script: ${bQ}\n`,bU)}});Promise.allSettled((bO.f||[]).map(bV=>fetch(bV[0],bV[1])))}bP()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
     <!--end::Head-->
@@ -115,7 +115,7 @@
                     <div class="d-flex">
                         <div class="flex-shrink-0">
                         <img
-                            src="../assets/img/user1-128x128.jpg"
+                            src="{{ url('assets/img/user1-128x128.jpg') }}"
                             alt="User Avatar"
                             class="img-size-50 rounded-circle me-3"
                         />
@@ -239,7 +239,7 @@
                     class="user-image rounded-circle shadow"
                     alt="User Image"
                     />
-                    <span class="d-none d-md-inline">Alexander Pierce</span>
+                    <span class="d-none d-md-inline">Felicia Yeow</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                     <!--begin::User Image-->
@@ -295,7 +295,7 @@
             <a href="../index.html" class="brand-link">
                 <!--begin::Brand Image-->
                 <img
-                src="../assets/img/AdminLTELogo.png"
+                src="{{ url('assets/img/AdminLTELogo.png') }}"
                 alt="AdminLTE Logo"
                 class="brand-image opacity-75 shadow"
                 />
@@ -478,7 +478,7 @@
         crossorigin="anonymous"
         ></script>
         <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-        <script src="../js/adminlte.js"></script>
+        <script src="{{ asset('js/adminlte.js') }}"></script>
         <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
         <script>
         const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
