@@ -3,7 +3,7 @@
 @section('title', 'Tambah Periode')
 
 @section('content')
-<form action="{{route('periode.store')}}" method="post">
+<form action="{{route('periode.store')}}" method="POST">
     <div class="form-group">
         <label for="tahun_akademik">Tahun Akademik</label> 
         <input type="text" name="tahun_akademik" class="form-control" value="{{ old('tahun_akademik') }}">

@@ -250,7 +250,7 @@
                         alt="User Image"
                     />
                     <p>
-                        Alexander Pierce - Web Developer
+                        Felicia Yeow - Web Developer
                         <small>Member since Nov. 2023</small>
                     </p>
                     </li>
@@ -258,25 +258,19 @@
                     <!--begin::Menu Body-->
                     <li class="user-body">
                     <!--begin::Row-->
-                    <div class="row">
-                        <div class="col-4 text-center">
-                        <a href="#">Followers</a>
-                        </div>
-                        <div class="col-4 text-center">
-                        <a href="#">Sales</a>
-                        </div>
-                        <div class="col-4 text-center">
-                        <a href="#">Friends</a>
-                        </div>
-                    </div>
+                    <form method="POST" action="{{ route('logout') }}" class="float-end">
+                        @csrf
+
+                        <a href="{{ route('logout') }}"
+                        class="btn btn-primary btn-flat"
+                        onclick="event.preventDefault(); this.closest('form').submit();">
+                            Log Out
+                        </a>
+                    </form>
                     <!--end::Row-->
                     </li>
                     <!--end::Menu Body-->
                     <!--begin::Menu Footer-->
-                    <li class="user-footer">
-                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                    <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
-                    </li>
                     <!--end::Menu Footer-->
                 </ul>
                 </li>
@@ -349,14 +343,20 @@
                         </ul>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ route('dashboard') }}" class="nav-link">
+                            <i class="nav-icon bi bi-speedometer"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route('periode.index') }}" class="nav-link">
-                            <i class="nav-icon bi bi-building"></i>
+                            <i class="nav-icon bi bi-calender"></i>
                             <p>Periode</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('fakultas.index') }}" class="nav-link">
-                            <i class="nav-icon bi bi-building"></i>
+                            <i class="nav-icon bi bi-bank"></i>
                             <p>Fakultas</p>
                         </a>
                     </li>
@@ -364,6 +364,12 @@
                         <a href="{{ route('prodi.index') }}" class="nav-link">
                             <i class="nav-icon bi bi-building"></i>
                             <p>Program Studi</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('mahasiswa.index') }}" class="nav-link">
+                            <i class="nav-icon bi bi-people"></i>
+                            <p>Mahasiswa</p>
                         </a>
                     </li>
                 </ul>

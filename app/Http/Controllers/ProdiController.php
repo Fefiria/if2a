@@ -65,7 +65,7 @@ class ProdiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $prodi)
+    public function update(Request $request, Prodi $prodi)
     {
         $input = $request->validate([
             'nama_prodi'  => 'required|unique:prodis',
@@ -81,10 +81,8 @@ class ProdiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($prodi)
+    public function destroy(Prodi $prodi)
     {
-        // dd($fakultas);
-        $prodi = Prodi::find($prodi);
 
         // dd($fakultas);
         $prodi->delete();//hapus
