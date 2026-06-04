@@ -9,7 +9,7 @@
             f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer');</script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>AdminLTE 4 | Register Page</title>
+        <title>Register Page</title>
 
         <!--begin::Accessibility Meta Tags-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
