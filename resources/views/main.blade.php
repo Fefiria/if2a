@@ -350,7 +350,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('periode.index') }}" class="nav-link">
-                            <i class="nav-icon bi bi-calender"></i>
+                            <i class="nav-icon bi bi-php artisan route:list"></i>
                             <p>Periode</p>
                         </a>
                     </li>
