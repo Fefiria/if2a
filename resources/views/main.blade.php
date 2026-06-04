@@ -38,28 +38,19 @@
         <!--end::Accessibility Features-->
 
         <!--begin::Fonts-->
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
-        integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q="
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'"
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
+        integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous" media="print" onload="this.media='all'"
         />
         <!--end::Fonts-->
 
         <!--begin::Third Party Plugin(OverlayScrollbars)-->
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css"
-        crossorigin="anonymous"
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css" crossorigin="anonymous"
         />
         <!--end::Third Party Plugin(OverlayScrollbars)-->
 
         <!--begin::Third Party Plugin(Bootstrap Icons)-->
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
         crossorigin="anonymous"
         />
         <!--end::Third Party Plugin(Bootstrap Icons)-->
@@ -350,7 +341,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('periode.index') }}" class="nav-link">
-                            <i class="nav-icon bi bi-php artisan route:list"></i>
+                            <i class="nav-icon bi bi-calendar"></i>
                             <p>Periode</p>
                         </a>
                     </li>
