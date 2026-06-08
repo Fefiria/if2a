@@ -6,6 +6,10 @@
     },
     "routes": [
         {
+            "src": "/assets/(.*)",
+            "dest": "/public/assets/"
+        },
+        {
             "src": "/build/(.*)",
             "dest": "/public/build/"
         },
@@ -14,16 +18,8 @@
             "dest": "/public/css/"
         },
         {
-            "src": "/images/(.*)",
-            "dest": "/public/images/"
-        },
-        {
             "src": "/js/(.*)",
             "dest": "/public/js/"
-        },
-        {
-            "src": "/vendors/(.*)",
-            "dest": "/public/vendors/"
         },
         {
             "src": "/(.*)",
