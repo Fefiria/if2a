@@ -164,8 +164,8 @@
             </div>
             <!-- /.social-auth-links -->
 
-            <p class="mb-0">
-                <a href="login.html" class="text-center"> I already have a membership </a>
+            <p class="mb-1">
+                <a href="{{ route('login') }}" class="text-center fw-bold"> I already have an account </a>
             </p>
             </div>
             <!-- /.register-card-body -->
